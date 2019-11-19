@@ -32,10 +32,6 @@ static int multi_or_single;
         
     //System.out.println("Enter 1 for single 2 for multi");
     
-    //Scanner inpt = new Scanner(System.in);
-   // multi_or_single=inpt.nextInt();
-    
-   // if(multi_or_single==1){ // action listener button1
     Single singlePlayer = new Single(); 
     singlePlayer.RunGame();
    
