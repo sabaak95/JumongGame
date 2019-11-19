@@ -15,7 +15,7 @@ public class SmallArrow extends Arrow {
         super("smallarrow");
     }
 
-    public void Use(Map map, Tile current_tile, String name, Player player1) {
+    public void Use(Map map, Tile current_tile, String name, Hero player1) {
         if(current_tile.getEnemy()>0){
         kill(map, current_tile, 1);
         this.isUsed = true;

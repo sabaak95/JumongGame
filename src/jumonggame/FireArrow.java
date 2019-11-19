@@ -15,7 +15,7 @@ public class FireArrow extends Arrow {
         super("firearrow");
     }
 
-    public void Use(Map map, Tile current_tile, String name, Player player1) {
+    public void Use(Map map, Tile current_tile, String name, Hero player1) {
         kill(map,current_tile,1);
         openwalls(map,current_tile,player1);
         this.isUsed=true; // at least opening walls is needed anywheres

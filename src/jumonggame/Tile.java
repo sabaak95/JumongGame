@@ -35,6 +35,71 @@ public class Tile {
     public void updateGold(int new_amount_of_gold){
     amountOfGold=new_amount_of_gold;
     }
-    
+       public String graphicShowInfo(){
+                //we make the counters 0 at first
+        int smallArrow=0,bigArrow=0,fireArrow=0,shovel=0,hawk=0,key=0,bigBag=0,stoneBreaker=0;
+        int energyPotion=0,reviveScroll=0,smallHealthPotion=0, bigHealthPotion =0;
+        for (Item item : items) { // items in this tile
+            
+            switch(item.getClass().getSimpleName().toLowerCase()){
+                case "smallarrow":
+                    smallArrow++;
+                    break;
+                case "bigarrow":
+                    bigArrow++;
+                    break;
+                case "firearrow":
+                    fireArrow++;
+                    break;
+                case "bigbag":
+                    bigBag++;
+                    break;
+                case "shovel":
+                    shovel++;
+                    break;
+                case "hawk":
+                    hawk++;
+                    break;
+                case "stonebreaker":
+                    stoneBreaker++;
+                    break;
+                case "energypotion":
+                    energyPotion++;
+                    break;
+                case "revivescroll":
+                    reviveScroll++;
+                    break;
+                case "key":
+                    key++;
+                    break;
+                case "smallpotion":
+                    smallHealthPotion++;
+                    break;
+                case "bigpotion":
+                      bigHealthPotion++;
+                    break;
+                }
+
+             }
+        
+             String names="";
+             
+        
+            return  ("Tile information:    \tSmallArrow:"+smallArrow
+                    +"\tBigArrow:"+bigArrow
+                    +"\tFireArrow:"+fireArrow
+                    +"\tKey:"+key
+                    +"\tEnergyPotion:"+energyPotion
+                    +"\tReviveScroll:"+reviveScroll
+                    +"\tSmallHealthPotion:"+smallHealthPotion
+                    +"\tBigHealthPotion:"+bigHealthPotion
+                    +"\tShovel:"+shovel
+                    +"\tHawk:"+hawk
+                    +"\tStoneBreaker:"+stoneBreaker
+                    +"\tBigBag:"+bigBag
+                    +"\nEnemies : "+names
+                    +"\nGold In this Tile : "+getGold()
+                    );
+    }
 
 }

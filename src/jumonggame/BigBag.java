@@ -17,7 +17,7 @@ public class BigBag extends Item{
     }
 
     @Override
-    public void Use(Map map, Tile current_tile, String name, Player player1) {
+    public void Use(Map map, Tile current_tile, String name, Hero player1) {
     int new_capacity;
     new_capacity=player1.getInventoryCapacity()+10;
     player1.updateInventoryCapacity(new_capacity);

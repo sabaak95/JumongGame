@@ -15,7 +15,7 @@ import java.util.Stack;
 public class Map {
 
     public Tile[][] tiles;
-    int dst_x, dst_y;
+    public int dst_x, dst_y;
 
     public Map() {
         tiles = new Tile[25][25];// for getting the memory 

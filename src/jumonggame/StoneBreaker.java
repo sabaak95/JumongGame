@@ -16,7 +16,7 @@ public class StoneBreaker extends Item {
     }
 
     @Override
-    public void Use(Map map, Tile current_tile, String name, Player player1) {
+    public void Use(Map map, Tile current_tile, String name, Hero player1) {
         for (int i = -1; i < 2; i++) {
             for (int j = -1; j < 2; j++) {
                 map.tiles[player1.getX() + i][player1.getY() + j].isWall = false;

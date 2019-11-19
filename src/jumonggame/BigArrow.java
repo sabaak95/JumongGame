@@ -16,11 +16,11 @@ public class BigArrow extends Arrow {
         super("bigarrow"); // tells the name to Arrow
     }
 
-    public void Use(Map map,Tile current_tile,String name,Player player1) {
+    public void Use(Map map,Tile current_tile,String name,Hero player1) {
         if(current_tile.getEnemy()>0){ // if it contains enemy , we use it and kill . if not , we dont use it.
         // we want to search through the enemies in that tile , if found , kill em !
         // we need searching cause if not , we cannot delet the OBJECT
-        kill(map,current_tile,10);
+       kill(map,current_tile,10);
         this.isUsed=true;
     }
     }

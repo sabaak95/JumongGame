@@ -15,7 +15,7 @@ public class BigPotion extends Potion {
         super("bigpotion");
     }
 
-    public void Use(Map map, Tile current_tile, String name, Player player1) {
+    public void Use(Map map, Tile current_tile, String name, Hero player1) {
         add(50,0,player1);
         this.isUsed=true;
     }

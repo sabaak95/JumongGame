@@ -17,11 +17,13 @@ public class ReviveScroll extends Item{
     }
 
     @Override
-    public void Use(Map map, Tile current_tile, String name, Player player1) {
+    public void Use(Map map, Tile current_tile, String name, Hero player1) {
         int new_hitpoint;
        
         if (player1.getHitpoint()<= 0){ // only in lethal damages
         new_hitpoint=player1.getHitpoint()+50;
+        player1.updateHitpoint(new_hitpoint);
+
         this.isUsed=true;
         }
         else

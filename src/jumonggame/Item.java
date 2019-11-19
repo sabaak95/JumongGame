@@ -14,6 +14,6 @@ public abstract class Item {
     public Item(String name) {
         this.name = name;
     }
-    public abstract void Use(Map map, Tile current_tile, String name,Player player1);
+    public abstract void Use(Map map, Tile current_tile, String name,Hero player1);
 
 }
