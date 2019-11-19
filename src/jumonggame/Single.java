@@ -228,7 +228,6 @@ public class Single {
     public void goldAndEnemyPrinter(){
         Tile new_tile = map.tiles[hero1.getX()][hero1.getY()]; // because we also want to update the tiles array in map
         if (new_tile.isWall == false) {// if it is not a wall 
-            System.out.println("Number of enemies :  " + new_tile.getEnemy());
             //hero1.updateLocations(new_x, new_y);
             
             System.out.println("Amount of gold :  " + new_tile.getGold());

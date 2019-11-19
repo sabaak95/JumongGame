@@ -16,7 +16,9 @@ public class Map {
 
     public Tile[][] tiles;
     public int dst_x, dst_y;
-
+    public Hero hero;   	
+    
+    
     public Map() {
         tiles = new Tile[25][25];// for getting the memory 
         int i, j;
@@ -28,7 +30,6 @@ public class Map {
         }
         genMaze();
         shareGold();
-        placeEnemies();
         placeItems();
     }
 
@@ -129,20 +130,7 @@ public class Map {
     }
 
 
-    private void placeEnemies() {
-        Random r = new Random();
-        int tiles_enemied = 0;
-        while (tiles_enemied < 50) {
-            int i = r.nextInt(24) + 1; // we dont wanna place enemies near the start point
-            int j = r.nextInt(24) + 1;
-            if (tiles[i][j].numOfEnemies == 0 && tiles[i][j].isWall == false) {
-                /*other tiles which are not generated here will be containing 0 enemies 
-                 because in tile's constructor it is initialized */
-                tiles[i][j].numOfEnemies = 1+r.nextInt(3);
-                tiles_enemied++;
-            }
-        }
-    }
+   
 
 
     private void placeItems() {
@@ -178,47 +166,47 @@ public class Map {
 
                 for (int c = 0; c < items_for_each_chest; c++) {
 
-                    Item item_to_add=null;
+                    Item item_to_add_to_chest=null;
                     switch (r.nextInt(11)) {
                         case 0:
-                            item_to_add = new SmallArrow();
+                            item_to_add_to_chest = new SmallArrow();
                             break;
                         case 1:
-                            item_to_add = new FireArrow();
+                            item_to_add_to_chest = new FireArrow();
                             break;
                         case 2:
-                            item_to_add = new BigArrow();
+                            item_to_add_to_chest = new BigArrow();
                             break;
                         case 3:
-                            item_to_add = new StoneBreaker();
+                            item_to_add_to_chest = new StoneBreaker();
                             break;
                         case 4:
-                            item_to_add = new Key();
+                            item_to_add_to_chest = new Key();
                             break;
                         case 5:
-                            item_to_add = new SmallPotion();
+                            item_to_add_to_chest = new SmallPotion();
                             break;
                         case 6:
-                            item_to_add = new BigPotion();
+                            item_to_add_to_chest = new BigPotion();
                             break;
                         case 7:
-                            item_to_add = new EnergyPotion();
+                            item_to_add_to_chest = new EnergyPotion();
                             break;
                         case 8:
-                            item_to_add = new ReviveScroll();
+                            item_to_add_to_chest = new ReviveScroll();
                             break;
                         case 9:
-                            item_to_add = new Hawk();
+                            item_to_add_to_chest = new Hawk();
                             break;
                         case 10:
-                            item_to_add = new Shovel();
+                            item_to_add_to_chest = new Shovel();
                             break;
                         case 11:
-                            item_to_add = new BigBag();
+                            item_to_add_to_chest = new BigBag();
                             break;
                     }
                     //add this item  to the arraylist
-                    tiles[i][j].chestItems.add(item_to_add);
+                    tiles[i][j].chestItems.add(item_to_add_to_chest);
                 }
                }
                 

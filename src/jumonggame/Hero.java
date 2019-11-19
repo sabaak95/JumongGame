@@ -168,9 +168,6 @@ public class Hero {
         hasDied = true;
         }
         g.update();
-        //reducer bayad balaye check enemy bashe vagrna 
-      //  checkEnemy(this.getX(),this.getY());
-     //   Graphic.update();
  
         }
         //whether is wall or not , it become visited
@@ -209,7 +206,7 @@ public class Hero {
             Graphic.energy_progress_bar.setValue(this.getEnergy());
             
             int new_hitpoint = this.getHitpoint();
-            new_hitpoint -= 10 * current_tile.getEnemy();
+           // new_hitpoint -= 10 * current_tile.getEnemy();
 
             this.updateHitpoint(new_hitpoint);
             Graphic.hitpoint_progress_bar.setValue(this.getHitpoint());
@@ -254,8 +251,9 @@ public void Use(Map map,String name,String EName) {
         boolean found=false; 
         for (Item item_for_using : this.inventories) { 
             if (item_for_using.name.equalsIgnoreCase(name)) { // that item is available in inventory 
+                if(EName==null) //halate addi
+                    item_for_using.Use(map,current_tile ,name,this); //item.use method 
                 
-            
                     if(item_for_using.isUsed ==true){
                     this.inventories.remove(item_for_using); //if it is used,remove it from directory 
                     JOptionPane.showMessageDialog(null,"item:"+name+"is used !" ,"Message",JOptionPane.PLAIN_MESSAGE) ;

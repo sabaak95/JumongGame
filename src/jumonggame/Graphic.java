@@ -158,7 +158,7 @@ public class Graphic extends JFrame implements KeyListener {
         energy_progress_bar.setValue(100);
         energy_progress_bar.setStringPainted(true);
 
-        ImageIcon phand = new ImageIcon("pick.jpg");
+        ImageIcon phand = new ImageIcon("pick.png");
         JButton pick = new JButton(phand);
         pick.setToolTipText("pick");
         command_panel.add(pick);
@@ -209,7 +209,7 @@ public class Graphic extends JFrame implements KeyListener {
          
         
         
-        ImageIcon pdrop = new ImageIcon("drop.jpg");
+        ImageIcon pdrop = new ImageIcon("drop.png");
         JButton drop = new JButton(pdrop);
         drop.setToolTipText("drop");
         command_panel.add(drop);
@@ -364,7 +364,7 @@ public class Graphic extends JFrame implements KeyListener {
 
         hero_icon = new ImageIcon("hero.jpg");
         wall = new ImageIcon("wall.jpg");
-        empty = new ImageIcon("grass.jpg");
+        empty = new ImageIcon("path.jpg");
         map_icons = new JLabel[25][25];
 
         Dimension each_tile_dimension = new Dimension((dimension.width - 200) / 25, dimension.height / 25);

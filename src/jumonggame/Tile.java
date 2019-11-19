@@ -12,25 +12,20 @@ public class Tile {
     public boolean isWall = false;
     public boolean isVisited = false;
     public int amountOfGold = 0;
-    public int numOfEnemies = 0;
     public boolean isLocked=false;
     public boolean hasChest=false;
     public ArrayList<Item> items = new ArrayList<Item>();
     public ArrayList<Item> chestItems = new ArrayList<Item>();
 
 
-    public int getEnemy() {
-        return numOfEnemies;
-    }
+    
     public ArrayList getItems(){
     return items;
     }
     public int getGold(){
     return amountOfGold;
     }
-    public void updateEnemies(int new_num_of_enemies){
-    numOfEnemies=new_num_of_enemies;
-    }
+   
     
     public void updateGold(int new_amount_of_gold){
     amountOfGold=new_amount_of_gold;
@@ -97,7 +92,7 @@ public class Tile {
                     +"\tHawk:"+hawk
                     +"\tStoneBreaker:"+stoneBreaker
                     +"\tBigBag:"+bigBag
-                    +"\nEnemies : "+names
+                    
                     +"\nGold In this Tile : "+getGold()
                     );
     }
