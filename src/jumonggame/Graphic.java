@@ -455,7 +455,7 @@ public class Graphic extends JFrame implements KeyListener {
                 } else {
                     if (hero.hasDied==true) {
                         
-                        JOptionPane.showMessageDialog(null, "You are died :(  ", "WARNING", JOptionPane.WARNING_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "You are DEAD :(  ", "WARNING", JOptionPane.WARNING_MESSAGE);
                         System.exit(0);
                     } else {
                         if (hero.hasWon==true) {
@@ -474,7 +474,7 @@ public class Graphic extends JFrame implements KeyListener {
                 } else {
                     if (hero.hasDied==true) {
                         
-                        JOptionPane.showMessageDialog(null, "You are died :( ", "WARNING", JOptionPane.WARNING_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "You are DEAD :( ", "WARNING", JOptionPane.WARNING_MESSAGE);
                        System.exit(0);
                     } else {
                         if (hero.hasWon==true) {
@@ -498,7 +498,7 @@ public class Graphic extends JFrame implements KeyListener {
                 } else {
                     if (hero.hasDied==true) {
                         
-                        JOptionPane.showMessageDialog(null, "You are died :( ", "WARNING", JOptionPane.WARNING_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "You are DEAD :( ", "WARNING", JOptionPane.WARNING_MESSAGE);
                         System.exit(0);
                     } else {
                         if (hero.hasWon==true) {
@@ -518,7 +518,7 @@ public class Graphic extends JFrame implements KeyListener {
                 } else {
                     if (hero.hasDied==true) {
                         
-                        JOptionPane.showMessageDialog(null, "You are died :( ", "WARNING", JOptionPane.WARNING_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "You are DEAD :( ", "WARNING", JOptionPane.WARNING_MESSAGE);
                         System.exit(0);
                     } else {
                         if (hero.hasWon==true) {

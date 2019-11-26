@@ -5,9 +5,15 @@
  */
 package jumonggame;
 
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.ListSelectionModel;
 import static jumonggame.Graphic.hero;
 import static jumonggame.Graphic.map;
@@ -168,7 +174,8 @@ public class Hero {
         hasDied = true;
         }
         g.update();
- 
+        checkChest(this.getX(),this.getY());
+
         }
         //whether is wall or not , it become visited
             map.tiles[new_x][new_y].isVisited = true;
@@ -367,6 +374,36 @@ public void Use(Map map,String name,String EName) {
     hasDied=true;
 }
     }
+    
+     private void checkChest(int x, int y) {
+        if (map.tiles[x][y].hasChest) {
+        
+            Tile current_tile = map.tiles[this.getX()][this.getY()]; // because we also want to update the tiles array in map
+
+        new Activity(map,x, y,this).setVisible(true);
+
+       // JOptionPane.showMessageDialog(null,b,"Select",JOptionPane.PLAIN_MESSAGE);
+
+
+       //String selection=l.getSelectedValue().toString();
+       /*
+       if(selection.equals("kire chest")) {
+     //       new LiveBattle(map,map.tiles[x][y],this);
+       } 
+       else if(selection.equals("Deal automatically")){
+          int smallarrowCounter=0;
+          for(Item item: this.inventories){
+             if(item.name.equalsIgnoreCase("smallarrow"))
+                 smallarrowCounter++;     
+          }
+       }
+       */
+       
+       
+      }
+    }
+    
+    
    
 }
 

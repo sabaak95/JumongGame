@@ -29,11 +29,10 @@ static int multi_or_single;
 
     public static void main(String[] args) {
     
-        
     //System.out.println("Enter 1 for single 2 for multi");
     
     Single singlePlayer = new Single(); 
-    singlePlayer.RunGame();
+   singlePlayer.RunGame();
    
     
 
